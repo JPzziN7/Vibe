@@ -16,7 +16,7 @@ class AuthController extends Controller
         return redirect()->route('catalogo');
     }
 
-    return view('auth.register'); // ou auth.cadastro
+    return view('auth.cadastro'); // ou auth.cadastro
 }
 
 

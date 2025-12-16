@@ -13,7 +13,7 @@
   <p>Entre e comece a expressar sua <span>VIBE</span></p>
   
 
-  <form method="POST" action="{{ route('register.store') }}" method="post">
+  <form method="POST" action="{{ route('cadastro.store') }}" method="post">
      @csrf
     <div class="inputBox">
       <input type="text" id="name" name="name" required class="inputUser"  placeholder="">
