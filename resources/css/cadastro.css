@@ -1,0 +1,220 @@
+/* Chrome, Edge, Safari */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px #2E1A47 inset; /* cor de fundo do input */
+    -webkit-text-fill-color: #E6E6EB; /* cor do texto */
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Firefox */
+input:-moz-autofill {
+    box-shadow: 0 0 0px 1000px #2E1A47 inset;
+    -moz-text-fill-color: #E6E6EB;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #181825;
+  color: #E6E6EB;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  height: 90vh;
+}
+
+
+.main {
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #2E1A47;
+  width: 500px;
+  border-radius: 50px;
+  box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.4),  /* sombra principal escura */
+        0 6px 6px rgba(72, 0, 128, 0.2),  /* leve tom roxo por identidade */
+        0 0 30px rgba(168, 85, 247, 0.2); /* brilho roxo vibrante suave */
+}
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+p{
+    text-align: center;
+    margin-bottom: 30px;
+}
+p span{
+    color: #A855F7;
+    font-weight: bold;
+}
+form{
+    margin-bottom: 25px;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="password"]{
+    background: none;
+    border: 0 ;
+    border-bottom: 1px solid #E6E6EB;
+    color: #E6E6EB;
+    outline: none;
+}
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    outline: none; 
+    border-bottom: 1px solid #A855F7; 
+}
+
+
+
+
+.inputBox {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.inputUser {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #E6E6EB;
+    outline: none;
+    color: #E6E6EB;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 15px;
+}
+
+.labelInput {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    pointer-events: none;
+    transition: 0.3s ease all;
+    color: #E6E6EB;
+}
+
+.inputUser:focus ~ .labelInput,
+.inputUser:not(:placeholder-shown) ~ .labelInput  {
+    top: -16px;
+    font-size: 12px;
+    color: #A855F7;
+}
+/* 
+
+.inputUser:invalid {
+    border-bottom: 1px solid #FF4C4C; 
+}
+
+.inputUser:invalid:focus {
+    border-bottom: 2px solid #FF4C4C; 
+}
+
+ 
+.inputUser:invalid ~ .labelInput {
+    color: #FF4C4C;
+}
+
+.inputUser:invalid ~ .errorMsg {
+    display: block;
+}
+  */
+.errorMsg {
+    display: none;
+    color: #FF4C4C;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+/* Input com erro */
+.inputUser.error {
+    border-bottom: 2px solid #FF4C4C;
+}
+
+
+
+button {
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #2E1A47, #A855F7);
+    color: #E6E6EB;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+
+button:hover {
+    background-image: linear-gradient(to right, #231536, #A855F7);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.social-icon.google {
+  background-color: #fff; /* bolinha branca */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.social-icon.google svg path {
+  /* Mantém as cores originais do Google */
+}
+
+.social-icon.facebook {
+  background-color: #4267B2; /* bolinha azul */
+}
+
+.social-icon.facebook svg path {
+  fill: #fff; /* ícone branco */
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+
