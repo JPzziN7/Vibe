@@ -10,7 +10,7 @@
 <body>
   <div class="main">
   <h1>Criar conta</h1>
-  <p>Entre e comece a expressar sua <span>VIBE</span></p>
+  <p>Entre e comece a expressar sua <span><a href="{{ route('home') }}">VIBE</a></span></p>
   
 
   <form method="POST" action="{{ route('cadastro.store') }}" method="post">
@@ -52,17 +52,13 @@
   </a>
 
   <!-- Facebook -->
-  <a href="#" class="social-icon facebook">
-    <svg viewBox="0 0 96.1 96.1">
-      <path fill="#4267B2" d="M72.1 0H24C10.8 0 0 10.8 0 24v48.1c0 13.2 10.8 24 24 24h24.9V58.9H41.4V45.7h7.5v-8.6c0-7.4 4.5-11.4 11-11.4 3.1 0 5.8.2 6.6.3v7.7h-4.6c-3.6 0-4.3 1.7-4.3 4.2v5.5h8.6l-1.1 13.2h-7.5V96H72c13.2 0 24-10.8 24-24V24c0-13.2-10.8-24-24-24z"/>
-    </svg>
-  </a>
+  
 </div>
 
 
   </form>
 
-  <p>Já tem uma conta? <a href="#">Entrar</a></p>
+  <p>Já tem uma conta? <a href="{{ route('login') }}">Entrar</a></p>
   </div>
   <script src="assets/js/cadastro.js"></script>
 </body>

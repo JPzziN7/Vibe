@@ -65,8 +65,9 @@ public function login(Request $request)
         return redirect()->route('catalogo');
     }
 
+    // Se falhou
     return back()->withErrors([
-        'email' => 'Email ou senha inválidos.',
+        'loginError' => 'Email ou senha inválidos.',
     ])->onlyInput('email');
 }
 

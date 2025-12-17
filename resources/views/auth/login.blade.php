@@ -11,13 +11,28 @@
   
   <div class="main">
   <h1>Entrar</h1>
-  <p>Bem-vindo de volta! Entre e continue expressando sua <span>VIBE</span></p>
+  <p>Bem-vindo de volta! Entre e continue expressando sua <span><a href="{{ route('home') }}">VIBE</a></span></p>
+
+  @if(session('status'))
+    <div class="statusMsg">
+        {{ session('status') }}
+    </div>
+  @endif
+
+    @if ($errors->any())
+    <div class="laravelErrorMsg show">
+        @foreach ($errors->all() as $error)
+            <p>{{ $error }}</p>
+        @endforeach
+    </div>
+@endif
 
   <form action="{{ route('login.store') }}" method="POST">
+    
     @csrf
     
     <div class="inputBox">
-      <input type="email" id="email" name="email" placeholder="" required class="inputUser">
+      <input type="email" id="email" name="email" placeholder="" required class="inputUser" value="{{ old('email') }}">
       <label for="email" class="labelInput">Email</label>
        <span class="errorMsg" id="emailError">Digite um email válido</span>
     </div>
@@ -40,17 +55,13 @@
   </a>
 
   <!-- Facebook -->
-  <a href="#" class="social-icon facebook">
-    <svg viewBox="0 0 96.1 96.1">
-      <path fill="#4267B2" d="M72.1 0H24C10.8 0 0 10.8 0 24v48.1c0 13.2 10.8 24 24 24h24.9V58.9H41.4V45.7h7.5v-8.6c0-7.4 4.5-11.4 11-11.4 3.1 0 5.8.2 6.6.3v7.7h-4.6c-3.6 0-4.3 1.7-4.3 4.2v5.5h8.6l-1.1 13.2h-7.5V96H72c13.2 0 24-10.8 24-24V24c0-13.2-10.8-24-24-24z"/>
-    </svg>
-  </a>
+  
 </div>
   </form>
 
   <p>
-    Não tem uma conta? <a href="#">Criar conta</a><br> <br>
-    Esqueceu a senha? <a href="#">Recuperar senha</a>
+    Não tem uma conta? <a href="{{ route('cadastro') }}">Criar conta</a><br> <br>
+    Esqueceu a senha? <a href="{{ route('password.request') }}">Recuperar senha</a>
   </p>
 </div>
   <script src="assets/js/login.js"></script>
