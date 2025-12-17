@@ -12,15 +12,25 @@
     <h1>Recuperar senha</h1>
     <p>Digite seu e-mail e enviaremos um link para redefinir sua senha.</p>
 
-    <form action="#" method="post">
-      <div class="inputBox">
-        <input type="email" id="recoveryEmail" name="recoveryEmail" required class="inputUser" placeholder="">
+    <form method="POST" action="{{ route('password.email') }}">
+    @csrf
+
+    @if (session('status'))
+        <div class="status">{{ session('status') }}</div>
+    @endif
+
+    <div class="inputBox">
+        <input type="email" id="recoveryEmail" name="email" required class="inputUser" placeholder="">
         <label for="recoveryEmail" class="labelInput">E-mail cadastrado</label>
         <span class="errorMsg" id="emailError">Digite um e-mail válido</span>
-      </div>
+    </div>
 
-      <button type="submit">Enviar link</button>
-    </form>
+    @error('email')
+        <div class="error">{{ $message }}</div>
+    @enderror
+
+    <button type="submit">Enviar link</button>
+</form>
 
     <p>Já tem uma conta? <a href="#">Entrar</a></p>
     <p>Não tem conta? <a href="#">Criar conta</a></p>
