@@ -14,8 +14,8 @@
             <ul>
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#rodape">Contato</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Cadastro</a></li>
+                <li><a href="{{ route('login') }}">Login</a></li>
+                <li><a href="{{ route('cadastro') }}">Cadastro</a></li>
             </ul>
         </nav>
     </header>
@@ -26,7 +26,7 @@
         <img src="{{ asset('images/VibeNomeLadoSemFundo.png') }}" alt="">
         <h2>Seu gosto cultural em um só Lugar.</h2>
         </div>
-        <a href="#">Começar</a>
+        <a href="{{ route('login') }}">Começar</a>
         </div>
         <div class="imagem"><img src="{{ asset('images/personagemSemFundo.png') }}" alt=""></div>    
     </div>
@@ -37,11 +37,11 @@
     <div class="exemplos">
         <h1>Conheça o Catalogo</h1>
     <div class="cards">
-        <div class="card"> <img src="{{ asset('images/albumBlonde.jpg') }}" alt=""> <a href="#">Começar</a></div>
-        <div class="card"> <img src="{{ asset('images/JawsPoster.jpg') }}" alt=""> <a href="#">Começar</a></div>
-        <div class="card"> <img src="{{ asset('images/DevoltaparaOfuturoPoster.jpg') }}" alt=""> <a href="#">Começar</a></div>
-        <div class="card"> <img src="{{ asset('images/SupermanPoster.jpg') }}" alt=""> <a href="#">Começar</a></div>
-        <div class="card"> <img src="{{ asset('images/StrangerThingsPoster.jpg') }}" alt=""> <a href="#">Começar</a></div>
+        <div class="card"> <img src="{{ asset('images/albumBlonde.jpg') }}" alt=""> <a href="{{ route('login') }}">Começar</a></div>
+        <div class="card"> <img src="{{ asset('images/JawsPoster.jpg') }}" alt=""> <a href="{{ route('login') }}">Começar</a></div>
+        <div class="card"> <img src="{{ asset('images/DevoltaparaOfuturoPoster.jpg') }}" alt=""> <a href="{{ route('login') }}">Começar</a></div>
+        <div class="card"> <img src="{{ asset('images/SupermanPoster.jpg') }}" alt=""> <a href="{{ route('login') }}">Começar</a></div>
+        <div class="card"> <img src="{{ asset('images/StrangerThingsPoster.jpg') }}" alt=""> <a href="{{ route('login') }}">Começar</a></div>
     </div>
     </div>
 

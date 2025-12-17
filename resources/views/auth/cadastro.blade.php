@@ -10,7 +10,7 @@
 <body>
   <div class="main">
   <h1>Criar conta</h1>
-  <p>Entre e comece a expressar sua <span>VIBE</span></p>
+  <p>Entre e comece a expressar sua <span><a href="{{ route('home') }}">VIBE</a></span></p>
   
 
   <form method="POST" action="{{ route('cadastro.store') }}" method="post">
@@ -62,7 +62,7 @@
 
   </form>
 
-  <p>Já tem uma conta? <a href="#">Entrar</a></p>
+  <p>Já tem uma conta? <a href="{{ route('login') }}">Entrar</a></p>
   </div>
   <script src="assets/js/cadastro.js"></script>
 </body>

@@ -11,7 +11,7 @@
   
   <div class="main">
   <h1>Entrar</h1>
-  <p>Bem-vindo de volta! Entre e continue expressando sua <span>VIBE</span></p>
+  <p>Bem-vindo de volta! Entre e continue expressando sua <span><a href="{{ route('home') }}">VIBE</a></span></p>
 
   <form action="{{ route('login.store') }}" method="POST">
     @csrf
@@ -49,7 +49,7 @@
   </form>
 
   <p>
-    Não tem uma conta? <a href="#">Criar conta</a><br> <br>
+    Não tem uma conta? <a href="{{ route('cadastro') }}">Criar conta</a><br> <br>
     Esqueceu a senha? <a href="#">Recuperar senha</a>
   </p>
 </div>

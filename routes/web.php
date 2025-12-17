@@ -5,7 +5,7 @@ use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
 
     // Cadastro
     Route::get('/cadastro', [AuthController::class, 'create'])->name('cadastro');
