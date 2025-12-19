@@ -32,8 +32,8 @@
     <button type="submit">Enviar link</button>
 </form>
 
-    <p>Já tem uma conta? <a href="#">Entrar</a></p>
-    <p>Não tem conta? <a href="#">Criar conta</a></p>
+    <p>Já tem uma conta? <a href="{{ route('login') }}">Entrar</a></p>
+    <p>Não tem conta? <a href="{{ route('cadastro') }}">Criar conta</a></p>
   </div>
 
   <script src="assets/js/recovery.js"></script>

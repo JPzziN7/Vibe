@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #1F1F2E;
+  color: #E6E6EB;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------- HEADER -------------------------------------------------------------------------------*/
+header {
+    width: 100%;
+    z-index: 1000;
+}
+.header-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 24px;
+    background-color: #1F1F2E;
+    border-bottom: 1px solid #2C2C3E;
+}
+.header-logo img {
+    height: 50px;       
+    width: auto;
+    display: block;
+    margin: 10px auto;
+}
+.header-top .header-search {
+    border: 2px solid #44445A;
+    border-radius: 999px;
+    overflow: hidden;
+    width: 320px;
+    margin-left: auto;
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.header-top .header-search:focus-within {
+    border-color: #6C6CFF;
+    box-shadow: 0 0 0 3px rgba(108, 108, 255, 0.15);
+}
+.header-top .header-search .search-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.header-top .header-search input[type="search"] {
+    flex: 1;
+    height: 42px;
+    padding: 0 14px;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+.header-top .header-search button {
+    width: 46px;
+    height: 42px;
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+}
+
+
+.header-top .header-search button:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Container do usuário */
+.header-top .header-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+/* container do menu */
+.user-profile {
+    position: relative;
+}
+
+/* menu escondido */
+.profile-menu {
+    position: absolute;
+    top: 52px;
+    right: 0;
+
+    min-width: 180px;
+    background-color: #1F1F2E;
+    border: 1px solid #2C2C3E;
+    border-radius: 8px;
+
+    padding: 8px 0;
+
+    opacity: 0;
+    transform: translateY(-5px);
+    pointer-events: none;
+
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 999;
+}
+
+
+.profile-menu.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
+.profile-menu ul {
+    list-style: none;
+}
+
+
+.profile-menu li a {
+    display: block;
+    padding: 10px 16px;
+
+    color: #E6E6EB;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: background 0.2s ease;
+}
+
+.profile-menu li a:hover {
+    background-color: #2A2A3D;
+}
+.profile-menu form {
+    margin: 0;
+}
+
+.profile-menu button {
+    width: 100%;
+    padding: 10px 16px;
+
+    background: none;
+    border: none;
+
+    color: #E6E6EB;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.profile-menu button:hover {
+    background-color: #2A2A3D;
+}
+
+.header-top .profile-button {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    background: transparent;
+    cursor: pointer;
+}
+
+.header-top .profile-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.header-top .profile-button:hover {
+    outline: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/*header inferior*/
+.header-bottom {
+    background-color: #181825;
+    border-bottom: 1px solid #2C2C3E;
+}
+.header-bottom .main-nav {
+    margin: 0 auto;
+}
+
+.header-bottom .main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+
+    padding: 8px 24px;
+}
+.header-bottom .main-nav a {
+    text-decoration: none;
+    color: #B8B8CC;
+
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+
+    position: relative;
+    padding: 4px 0;
+
+    transition: color 0.2s ease;
+}
+.header-bottom .main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+
+    width: 0;
+    height: 2px;
+    background-color: #6C6CFF;
+
+    transition: width 0.2s ease;
+}
+
+.header-bottom .main-nav a:hover {
+    color: #FFFFFF;
+}
+
+.header-bottom .main-nav a:hover::after {
+    width: 100%;
+}
+.header-bottom .main-nav a.active {
+    color: #FFFFFF;
+}
+
+.header-bottom .main-nav a.active::after {
+    width: 100%;
+}
+/*--------------------------------------------------------------Carousel----------------------------------------------------------------------*/
+.catalogo h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 24px 70px 12px;
+    
+}
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: auto 70px;
+    
+}
+.cards-midias {
+    overflow: hidden; 
+    width: 100%;
+    
+}
+.cards-midias ul {
+    display: flex;
+    gap: 16px;
+    padding: 10px;
+    list-style: none;
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    
+    scrollbar-width: none;
+}
+.cards-midias ul::-webkit-scrollbar {
+    display: none;
+}
+.cards-midias li {
+    flex: 0 0 180px; 
+    height: 270px;    
+    scroll-snap-align: start;
+
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #1A1A2A;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+.cards-midias li:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    border: 1px solid #6C6CFF;
+}
+.cards-midias img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.carousel-btn {
+    background: rgba(75, 75, 75, 0.3);
+    color: #fff;
+    border: none;
+    font-size: 28px;
+    width: 42px;
+    height: 200px;
+    cursor: pointer;
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background 0.2s;
+}
+
+.carousel-btn:hover {
+    background: rgba(0,0,0,0.9);
+}
