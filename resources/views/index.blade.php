@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="shortcut icon" href="{{ asset('images/Vibe roxo sem fundo.png') }}" type="image/x-icon">
     <title>VIBE</title>
     @vite('resources/css/style.css')
@@ -81,18 +82,36 @@
 
 
 
-<footer id="rodape">
-    <p>© 2025 VIBE. Todos os direitos reservados.</p>
-    <p>
-      <a href="#">Sobre nós</a>
-      <a href="mailto:joaopedrodeoliveiramagalhaes5@gmail.com">Contato</a>
-      <a href="#">Política de Privacidade</a>
-    </p>
-    <div class="footer-bottom">
-      Feito com ❤ por João Pedro
-    </div>
-  </footer>
+<footer class="site-footer">
+        <div class="footer-container">
+            
+            <div class="footer-top">
+                <nav class="footer-links">
+                    <a href="#">Sobre nós</a>
+                    <a href="#">Contato</a>
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos</a>
+                    <a href="#">Ajuda</a>
+                </nav>
 
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a> 
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2025 VIBE. Todos os direitos reservados. 
+                    <span class="separator">|</span> 
+                    Feito por fãs para fãs.
+                </p>
+            </div>
+
+        </div>
+    </footer>
 
 
 </body>
